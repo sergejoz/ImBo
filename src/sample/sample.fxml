@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #161616;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="234.0" prefHeight="700.0" prefWidth="230.0" style="-fx-background-color: #1c1c1c;" />
+      <AnchorPane layoutX="475.0" prefHeight="700.0" prefWidth="529.0" style="-fx-background-color: #1c1c1c;" />
+      <AnchorPane prefHeight="700.0" prefWidth="223.0" style="-fx-background-color: #1c1c1c;">
+         <children>
+            <Label layoutX="28.0" layoutY="35.0" text="MEGAIMAGEBOARD" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semibold" size="18.0" />
+               </font>
+            </Label>
+            <TextField layoutX="28.0" layoutY="90.0" prefHeight="25.0" prefWidth="168.0" promptText="Поиск..." />
+            <Button alignment="TOP_LEFT" cache="true" layoutY="215.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="223.0" style="-fx-border-color: #1c1c1c; -fx-background-color: #1c1c1c;" text="Feed" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button alignment="TOP_LEFT" layoutX="1.0" layoutY="255.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="223.0" style="-fx-background-color: #1c1c1c; -fx-border-color: #1c1c1c;" text="New posts" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button alignment="TOP_LEFT" layoutY="295.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="223.0" style="-fx-background-color: #1c1c1c; -fx-border-color: #1c1c1c;" text="Popular posts" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
