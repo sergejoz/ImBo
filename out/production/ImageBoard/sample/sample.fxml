@@ -309,38 +309,38 @@
                   <Image url="@PICS/when-you-type-send-nudes-but-it-auto-corrects-to-10381134.png" />
                </image>
             </ImageView>
-            <Label layoutX="127.0" layoutY="522.0" text="Nickname" textFill="#868686" underline="true">
+            <Label fx:id="ActiveNickname" layoutX="127.0" layoutY="522.0" text="Nickname" textFill="#868686" underline="true">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </Label>
-            <Label layoutX="14.0" layoutY="522.0" text="8 YEARS AGO" textFill="#868686">
+            <Label fx:id="ActiveDate" layoutX="14.0" layoutY="522.0" text="8 YEARS AGO" textFill="#868686">
                <font>
                   <Font size="17.0" />
                </font>
             </Label>
             <ScrollBar layoutX="507.0" layoutY="7.0" orientation="VERTICAL" prefHeight="681.0" prefWidth="20.0" style="-fx-background-color: #1c1c1c;" />
-            <Label layoutX="17.0" layoutY="484.0" text="Title" textFill="WHITE">
+            <Label fx:id="ActiveTitle" layoutX="17.0" layoutY="484.0" text="Title" textFill="WHITE">
                <font>
                   <Font size="26.0" />
                </font>
             </Label>
-            <Label layoutX="220.0" layoutY="522.0" text="TAG" textFill="#868686">
+            <Label fx:id="ActiveTag" layoutX="220.0" layoutY="522.0" text="TAG" textFill="#868686">
                <font>
                   <Font size="17.0" />
                </font>
             </Label>
-            <ImageView fitHeight="20.0" fitWidth="14.0" layoutX="465.0" layoutY="513.0" pickOnBounds="true">
+            <ImageView fx:id="ActiveDownButton" fitHeight="20.0" fitWidth="14.0" layoutX="465.0" layoutY="513.0" pickOnBounds="true">
                <image>
                   <Image url="@PICS/smallarrowdown.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="27.0" fitWidth="14.0" layoutX="403.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="ActveUpButton" fitHeight="27.0" fitWidth="14.0" layoutX="403.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@PICS/smallarrowup.png" />
                </image>
             </ImageView>
-            <Label layoutX="424.0" layoutY="507.0" text="228" textFill="WHITE">
+            <Label fx:id="ActiveRate" layoutX="424.0" layoutY="507.0" text="228" textFill="WHITE">
                <font>
                   <Font size="21.0" />
                </font>
@@ -353,31 +353,31 @@
                   <Font name="Segoe UI Semibold" size="18.0" />
                </font>
             </Label>
-            <TextField layoutX="22.0" layoutY="90.0" prefHeight="30.0" prefWidth="183.0" promptText="Поиск...">
+            <TextField fx:id="SearchField" layoutX="22.0" layoutY="90.0" prefHeight="30.0" prefWidth="183.0" promptText="Поиск...">
                <font>
                   <Font size="14.0" />
                </font></TextField>
-            <ImageView accessibleRole="BUTTON" fitHeight="24.0" fitWidth="144.0" layoutX="14.0" layoutY="175.0" onMousePressed="#MyFeedClicked" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="MyFeedButton" accessibleRole="BUTTON" fitHeight="24.0" fitWidth="144.0" layoutX="14.0" layoutY="175.0" onMousePressed="#MyFeedClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@PICS/home1.png" />
                </image>
             </ImageView>
-            <ImageView accessibleRole="BUTTON" fitHeight="24.0" fitWidth="200.0" layoutX="15.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="NewPostsButton" accessibleRole="BUTTON" fitHeight="24.0" fitWidth="200.0" layoutX="15.0" layoutY="249.0" onMouseClicked="#NewClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@PICS/new.png" />
                </image>
             </ImageView>
-            <ImageView accessibleRole="BUTTON" fitHeight="26.0" fitWidth="200.0" layoutX="22.0" layoutY="211.0" onMouseClicked="#MyFeedClicked" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="PopularButton" accessibleRole="BUTTON" fitHeight="26.0" fitWidth="200.0" layoutX="22.0" layoutY="211.0" onMouseClicked="#MyFeedClicked" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@PICS/hot.png" />
                </image>
             </ImageView>
-            <ImageView accessibleRole="BUTTON" fitHeight="23.0" fitWidth="206.0" layoutX="21.0" layoutY="661.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="SettingsButton" accessibleRole="BUTTON" fitHeight="23.0" fitWidth="206.0" layoutX="21.0" layoutY="661.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@PICS/settings.png" />
                </image>
             </ImageView>
-            <Label layoutX="34.0" layoutY="621.0" text="USERNAME" textFill="WHITE">
+            <Label fx:id="CurrentUser" layoutX="34.0" layoutY="621.0" text="USERNAME" textFill="WHITE">
                <font>
                   <Font size="21.0" />
                </font>
