@@ -79,7 +79,7 @@ public class LoginformController {
 
         if (counter >= 1) {
             System.out.println("EASY!");
-
+            user.setNickname(loginText);
             LogInButton.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/sample.fxml"));
@@ -93,6 +93,11 @@ public class LoginformController {
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.show();
+
+        } else {
+            System.out.println("NEVERNO, BRAT");
+            user.setNickname("");
+            user.setPassword("");
 
         }
     }

@@ -3,6 +3,7 @@ package sample;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -73,16 +74,18 @@ public class Controller {
     @FXML
     void initialize() {
         MyFeedButton.setOnMouseClicked(event ->
-        {System.out.println("ZDAORVA");
+        {
+            System.out.println("ZDAORVA");
         });
 
         CurrentUser.setOnMouseClicked(event ->
-        {CurrentUser.getScene().getWindow().hide();
+        {
+            CurrentUser.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/loginform.fxml"));
             try {
                 loader.load();
-            } catch (IOException e){
+            } catch (IOException e) {
                 e.printStackTrace();
             }
 
@@ -91,22 +94,29 @@ public class Controller {
             stage.setScene(new Scene(root));
             stage.show();
         });
+
+        NewPostsButton.setOnMouseClicked(event ->
+        {
+           // User user = new User();
+         //CurrentUser.setText(user.getNickname());
+         System.out.println("KTO ETO");
+         //   System.out.println(user.getNickname());
+        })
+        ;
+
     }
 
-    public void MyFeedClicked()
-    {
-       // System.out.println("FEED");
+    public void MyFeedClicked() {
+        //System.out.println("FEED");
 
     }
 
-    public void HotClicked()
-    {
+    public void HotClicked() {
         //System.out.println("HOT");
 
     }
 
-    public void NewClicked()
-    {
+    public void NewClicked() {
         //System.out.println("NEW");
     }
 }
