@@ -60,7 +60,7 @@ public class SignUpController {
     private void signUpNewUser() {
         DatabaseHandler dbHandler = new DatabaseHandler();
         String Nickname = SignUpLogin.getText();
-        String Password = SignUpLogin.getText();
+        String Password = SignUpPassword.getText();
         User user = new User(Nickname,Password);
         dbHandler.signUpUser(Nickname,Password);
     }

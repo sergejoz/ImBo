@@ -14,8 +14,6 @@ public class DatabaseHandler extends Configs {
         String connectionString = "jdbc:mysql://" + dbHost + ":"
                 + dbPort + "/" + dbName + "?" + "useUnicode=true&useSSL=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 
-        //Class.forName("com.mysql.jdbc.Driver");﻿
-
         dbConnection = DriverManager.getConnection(connectionString, dbUser, dbPass);
 
         return dbConnection;
