@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="576.0" prefWidth="518.0" style="-fx-background-color: #161616;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CreatePostController">
+   <children>
+      <Button fx:id="publicate" layoutX="408.0" layoutY="538.0" mnemonicParsing="false" text="Опубликовать" />
+      <ImageView fx:id="imageView" fitHeight="461.0" fitWidth="491.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@PICS/when-you-type-send-nudes-but-it-auto-corrects-to-10381134.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="textBox" layoutX="14.0" layoutY="507.0" prefHeight="11.0" prefWidth="489.0" text="Заголовок поста" />
+      <Label fx:id="headerPost" layoutX="14.0" layoutY="475.0" prefHeight="32.0" prefWidth="173.0" text="Заголовок поста" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="Cancel" layoutX="14.0" layoutY="538.0" mnemonicParsing="false" text="Отменить" />
+   </children>
+</AnchorPane>

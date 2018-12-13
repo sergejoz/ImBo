@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,6 +14,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class Controller {
 
@@ -61,6 +63,11 @@ public class Controller {
     @FXML
     private Label CurrentUser;
 
+    FXMLLoader loader;
+
+    public Controller() {
+    }
+
     @FXML
     void MyFeedClicked(MouseEvent event) {
 
@@ -73,6 +80,8 @@ public class Controller {
 
     @FXML
     void initialize() {
+        RefreshUsername();
+
         MyFeedButton.setOnMouseClicked(event ->
         {
             System.out.println("ZDAORVA");
@@ -80,20 +89,14 @@ public class Controller {
 
         CurrentUser.setOnMouseClicked(event ->
         {
-            CurrentUser.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/loginform.fxml"));
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
+            if(User.getCurrentUser().getNickname()!=null)
+            {
+                UserWindowShow();
             }
-
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
+            else
+            LoginWindowShow();
         });
+
 
         NewPostsButton.setOnMouseClicked(event ->
         {
@@ -104,6 +107,53 @@ public class Controller {
         })
         ;
 
+    }
+
+    private void LoginWindowShow()
+    {
+        CurrentUser.getScene().getWindow().hide();
+        loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/sample/loginform.fxml"));
+        try {
+            loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Parent root = loader.getRoot();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+
+    private void UserWindowShow()
+    {
+        loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/sample/UserWindow.fxml"));
+        try {
+            loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Parent root = loader.getRoot();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.showAndWait();
+        RefreshUsername();
+    }
+
+    public void RefreshUsername()
+    {
+        if(User.getCurrentUser().getNickname()!=null)
+        {
+            this.CurrentUser.setText(User.getCurrentUser().getNickname());
+        }
+        else
+        {
+            this.CurrentUser.setText("Вход");
+        }
     }
 
     public void MyFeedClicked() {

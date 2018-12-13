@@ -63,6 +63,7 @@ public class LoginformController {
     private void LoginUser(String loginText, String loginPassword) {
         DatabaseHandler dbHandler = new DatabaseHandler();
         User user = new User();
+        user.setCurrentUser(user);//запоминаем текщего пользователя
         user.setNickname(loginText);
         user.setPassword(loginPassword);
         ResultSet result = dbHandler.getUser(user);

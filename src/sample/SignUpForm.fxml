@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="352.0" prefWidth="249.0" style="-fx-background-color: #161616;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignUpController">
+<AnchorPane fx:id="mainWindow" prefHeight="352.0" prefWidth="249.0" style="-fx-background-color: #161616;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignUpController">
    <children>
       <TextField fx:id="SignUpLogin" layoutX="30.0" layoutY="21.0" promptText="Логин">
          <font>
@@ -20,12 +20,12 @@
             <Font size="15.0" />
          </font>
       </PasswordField>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="30.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" layoutX="30.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@PICS/when-you-type-send-nudes-but-it-auto-corrects-to-10381134.png" />
          </image>
       </ImageView>
-      <Button fx:id="ChoosePic" layoutX="30.0" layoutY="259.0" mnemonicParsing="false" text="Выбрать фото">
+      <Button fx:id="ChoosePicNewUser" layoutX="30.0" layoutY="259.0" mnemonicParsing="false" onAction="#browsePic" text="Выбрать фото">
          <font>
             <Font size="15.0" />
          </font>

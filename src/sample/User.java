@@ -1,16 +1,27 @@
 package sample;
 
 public class User {
-    private String Nickname;
-    private String Password;
-
+    public User()
+    {}
     public User(String nickname, String password) {
         Nickname = nickname;
         Password = password;
     }
 
-    public User()
-    {}
+    private static User CURRENT_USER = new User();
+    private String Nickname;
+    private String Password;
+    private String UserType;//тип пользователя: админ = 0, модератор = 1, юзер = 2
+
+    public static void setCurrentUser(User user) {
+        CURRENT_USER = user;
+        System.out.println("User has been set");
+    }
+
+    public static User getCurrentUser() {
+        System.out.println("User has been get");
+        return CURRENT_USER;
+    }
 
     public String getNickname() {
         return Nickname;
@@ -27,4 +38,6 @@ public class User {
     public void setPassword(String password) {
         Password = password;
     }
+
+
 }

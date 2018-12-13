@@ -23,14 +23,7 @@ public class DatabaseHandler extends Configs {
 
     public void signUpUser(String UserNickname, String UserPassword) {
         String insert = "INSERT INTO " + Const.USER_TABLE + "(" + Const.USERS_NAME + "," + Const.USERS_PASS + ")" + "VALUES (?,?)";
-        try {
-            PreparedStatement prSt = getDbConnection().prepareStatement(insert);
-            prSt.setString(1, UserNickname);
-            prSt.setString(2, UserPassword);
-            prSt.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        connectDB(UserNickname, UserPassword, insert);
 
     }
 
@@ -46,6 +39,34 @@ public class DatabaseHandler extends Configs {
             e.printStackTrace();
         }
         return resSet;
+    }
+
+    public  void UpdatePassword(String UserNickname, String UserPassword)
+    {
+        //UPDATE `test`.`users` SET `password` = '1231' WHERE (`user_id` = '1');
+        String update = "UPDATE `test`.`users` SET `" + Const.USERS_PASS + "` = '" + UserPassword + "' WHERE (`" + Const.USERS_NAME + "` = '" + UserNickname + "')";
+        connectDB1(update);
+    }
+
+
+    private void connectDB1(String command) {
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(command);
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void connectDB(String UserNickname, String UserPassword, String command) {
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(command);
+            prSt.setString(1, UserNickname);
+            prSt.setString(2, UserPassword);
+            prSt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
 
