@@ -22,8 +22,6 @@ public class UserWindowController {
     @FXML
     private Button exitButton;
 
-    @FXML
-    private Label success;
 
     @FXML
     void initialize() {
@@ -34,30 +32,41 @@ public class UserWindowController {
 
         //добавить пост
         createPostButton.setOnAction(event -> {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/CreatePost.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            exitButton.getScene().getWindow().hide();
+            stage.show();
+            ((Stage) exitButton.getScene().getWindow()).close();
         });
 
         //сменить пароль
         changePasswordButton.setOnAction(event -> {
-            FXMLLoader  loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("/sample/ChangePass.fxml"));
-                try {
-                    loader.load();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/ChangePass.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
-                Parent root = loader.getRoot();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root));
-                stage.showAndWait();
-
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
         });
 
         //выйти из учетной записи
         exitButton.setOnAction(event -> {
             User.setCurrentUser(new User());
-            ((Stage) Main.primaryStage.getScene().getWindow()).close();
             ((Stage) exitButton.getScene().getWindow()).close();
         });
     }

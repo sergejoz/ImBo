@@ -15,11 +15,9 @@ public class User {
 
     public static void setCurrentUser(User user) {
         CURRENT_USER = user;
-        System.out.println("User has been set");
     }
 
     public static User getCurrentUser() {
-        System.out.println("User has been get");
         return CURRENT_USER;
     }
 
@@ -40,4 +38,11 @@ public class User {
     }
 
 
+    public String getUserType() {
+        return UserType;
+    }
+
+    public void setUserType(String userType) {
+        UserType = userType;
+    }
 }

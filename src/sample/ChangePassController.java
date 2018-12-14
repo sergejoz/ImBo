@@ -26,7 +26,7 @@ public class ChangePassController {
         changePassButton.setOnAction(event -> {
             if(!oldpass.getText().equals(User.getCurrentUser().getPassword()))
             {
-                status.setText("старый пароль не совпадает, попробуйте еще раз");
+                status.setText("старый пароль не совпадает,\r\nпопробуйте еще раз");
                 status.setVisible(true);
                 return;
             }
@@ -40,7 +40,7 @@ public class ChangePassController {
 
             if(!newpass1.getText().equals(newpass2.getText()))
             {
-                status.setText("введите повторно новый пароль");
+                status.setText("введите повторно\r\nновый пароль");
                 status.setVisible(true);
                 return;
             }
@@ -52,7 +52,7 @@ public class ChangePassController {
             }
             catch(Exception ex)
             {
-                status.setText("Не удалось обновить пароль, попробуйте еще раз");
+                status.setText("Не удалось обновить пароль,\r\nпопробуйте еще раз");
                 status.setVisible(true);
             }
 

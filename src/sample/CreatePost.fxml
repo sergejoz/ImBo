@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="576.0" prefWidth="518.0" style="-fx-background-color: #161616;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CreatePostController">
+<AnchorPane prefHeight="602.0" prefWidth="518.0" style="-fx-background-color: #161616;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CreatePostController">
    <children>
       <Button fx:id="publicate" layoutX="408.0" layoutY="538.0" mnemonicParsing="false" text="Опубликовать" />
       <ImageView fx:id="imageView" fitHeight="461.0" fitWidth="491.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
@@ -22,6 +22,12 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Button fx:id="Cancel" layoutX="14.0" layoutY="538.0" mnemonicParsing="false" text="Отменить" />
+      <Button fx:id="cancel" layoutX="14.0" layoutY="538.0" mnemonicParsing="false" text="Отменить" />
+      <Button fx:id="loadImage" layoutX="185.0" layoutY="538.0" mnemonicParsing="false" text="Загрузить изображение" />
+      <Label fx:id="status" layoutX="14.0" layoutY="571.0" prefHeight="17.0" prefWidth="364.0" text="Label" textFill="WHITE" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

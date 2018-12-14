@@ -24,6 +24,5 @@
          </font>
       </Label>
       <Button fx:id="exitButton" layoutX="21.0" layoutY="240.0" mnemonicParsing="false" text="Выйти из текущей учетной записи" />
-      <Label fx:id="success" layoutX="132.0" layoutY="201.0" text="пароль успешно сохранен" textFill="#bfbfbf" />
    </children>
 </AnchorPane>

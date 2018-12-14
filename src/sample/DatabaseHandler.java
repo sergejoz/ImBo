@@ -1,5 +1,10 @@
 package sample;
 
+import javafx.scene.control.Alert;
+
+import java.awt.*;
+import java.io.File;
+import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -68,6 +73,25 @@ public class DatabaseHandler extends Configs {
             e.printStackTrace();
         }
     }
+
+
+    public boolean createPost(String userName, String postHeader, File file)
+    {
+        try {
+            String query = "INSERT INTO test.posts (user_id,title,image) VALUES((select user_id from users where users.name = '" + userName +"' LIMIT 1),?,?)";
+            PreparedStatement pst = getDbConnection().prepareStatement(query);
+            pst.setString(1, postHeader);
+            FileInputStream fis = new FileInputStream(file);
+            pst.setBinaryStream(2, fis, (int)file.length());
+            pst.execute();
+            pst.close();
+        } catch (Exception var5) {
+            System.err.println(var5);
+            return false;
+        }
+        return true;
+    }
+
 }
 
 
