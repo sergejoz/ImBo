@@ -1,17 +1,23 @@
 package sample;
 
+import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.ResultSet;
+import java.io.IOException;
+import java.sql.*;
+
 
 public class DatabaseHandler extends Configs {
+    @FXML
+    private ImageView im ;
+
     Connection dbConnection;
 
     public Connection getDbConnection()
@@ -39,6 +45,7 @@ public class DatabaseHandler extends Configs {
             PreparedStatement prSt = getDbConnection().prepareStatement(select);
             prSt.setString(1, user.getNickname());
             prSt.setString(2, user.getPassword());
+
             resSet = prSt.executeQuery();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -91,6 +98,8 @@ public class DatabaseHandler extends Configs {
         }
         return true;
     }
+
+
 
 }
 
