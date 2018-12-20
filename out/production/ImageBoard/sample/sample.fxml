@@ -11,44 +11,44 @@
    <children>
       <AnchorPane layoutX="233.0" prefHeight="700.0" prefWidth="302.0" style="-fx-background-color: #1c1c1c;">
          <children>
-            <AnchorPane prefHeight="103.0" prefWidth="302.0" style="-fx-background-color: #212121;">
+            <AnchorPane fx:id="pane1" prefHeight="103.0" prefWidth="302.0" style="-fx-background-color: #212121;">
                <children>
-                  <ImageView fitHeight="82.0" fitWidth="81.0" layoutX="8.0" layoutY="11.0">
+                  <ImageView fx:id="image1" fitHeight="82.0" fitWidth="81.0" layoutX="8.0" layoutY="11.0">
                      <image>
                         <Image url="@PICS/when-you-type-send-nudes-but-it-auto-corrects-to-10381134.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="101.0" layoutY="41.0" text="8 YEARS AGO" textFill="#868686">
+                  <Label fx:id="date1" layoutX="101.0" layoutY="41.0" text="8 YEARS AGO" textFill="#868686">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="194.0" layoutY="41.0" text="Nickname" textFill="#868686" underline="true">
+                  <Label fx:id="nick1" layoutX="103.0" layoutY="79.0" text="Nickname" textFill="#868686" underline="true">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="100.0" layoutY="8.0" text="Title" textFill="WHITE">
+                  <Label fx:id="title1" layoutX="100.0" layoutY="8.0" text="Title" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="18.0" fitWidth="12.0" layoutX="273.0" layoutY="72.0" pickOnBounds="true">
+                  <ImageView fx:id="down1" fitHeight="18.0" fitWidth="12.0" layoutX="276.0" layoutY="73.0" pickOnBounds="true">
                      <image>
                         <Image url="@PICS/smallarrowdown.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="18.0" fitWidth="12.0" layoutX="224.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="up1" fitHeight="18.0" fitWidth="12.0" layoutX="227.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@PICS/smallarrowup.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="242.0" layoutY="69.0" text="228" textFill="WHITE">
+                  <Label fx:id="score1" alignment="CENTER" contentDisplay="CENTER" layoutX="239.0" layoutY="70.0" prefHeight="25.0" prefWidth="32.0" text="228" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="100.0" layoutY="62.0" text="TAG" textFill="#868686">
+                  <Label fx:id="tag1" layoutX="100.0" layoutY="62.0" text="TAG" textFill="#868686">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -80,220 +80,220 @@
                   <Font name="System Bold" size="21.0" />
                </font>
             </Label>
-            <AnchorPane layoutY="110.0" prefHeight="103.0" prefWidth="302.0" style="-fx-background-color: #212121;">
+            <AnchorPane fx:id="pane2" layoutY="110.0" prefHeight="103.0" prefWidth="302.0" style="-fx-background-color: #212121;">
                <children>
-                  <ImageView fitHeight="82.0" fitWidth="81.0" layoutX="8.0" layoutY="11.0">
+                  <ImageView fx:id="image2" fitHeight="82.0" fitWidth="81.0" layoutX="8.0" layoutY="11.0">
                      <image>
                         <Image url="@PICS/when-you-type-send-nudes-but-it-auto-corrects-to-10381134.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="101.0" layoutY="41.0" text="8 YEARS AGO" textFill="#868686">
+                  <Label fx:id="date2" layoutX="101.0" layoutY="41.0" text="8 YEARS AGO" textFill="#868686">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="194.0" layoutY="41.0" text="Nickname" textFill="#868686" underline="true">
+                  <Label fx:id="nick2" layoutX="103.0" layoutY="79.0" text="Nickname" textFill="#868686" underline="true">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="100.0" layoutY="8.0" text="Title" textFill="WHITE">
+                  <Label fx:id="title2" layoutX="100.0" layoutY="8.0" text="Title" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="18.0" fitWidth="12.0" layoutX="273.0" layoutY="72.0" pickOnBounds="true">
+                  <ImageView fx:id="down2" fitHeight="18.0" fitWidth="12.0" layoutX="276.0" layoutY="63.0" pickOnBounds="true">
                      <image>
                         <Image url="@PICS/smallarrowdown.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="18.0" fitWidth="12.0" layoutX="224.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="up2" fitHeight="18.0" fitWidth="12.0" layoutX="227.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@PICS/smallarrowup.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="242.0" layoutY="69.0" text="228" textFill="WHITE">
+                  <Label fx:id="score2" alignment="CENTER" contentDisplay="CENTER" layoutX="245.0" layoutY="60.0" prefHeight="25.0" prefWidth="26.0" text="228" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="100.0" layoutY="62.0" text="TAG" textFill="#868686">
+                  <Label fx:id="tag2" layoutX="100.0" layoutY="62.0" text="TAG" textFill="#868686">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutY="222.0" prefHeight="103.0" prefWidth="302.0" style="-fx-background-color: #212121;">
+            <AnchorPane fx:id="pane3" layoutY="222.0" prefHeight="103.0" prefWidth="302.0" style="-fx-background-color: #212121;">
                <children>
-                  <ImageView fitHeight="82.0" fitWidth="81.0" layoutX="8.0" layoutY="11.0">
+                  <ImageView fx:id="image3" fitHeight="82.0" fitWidth="81.0" layoutX="8.0" layoutY="11.0">
                      <image>
                         <Image url="@PICS/when-you-type-send-nudes-but-it-auto-corrects-to-10381134.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="101.0" layoutY="41.0" text="8 YEARS AGO" textFill="#868686">
+                  <Label fx:id="date3" layoutX="101.0" layoutY="41.0" text="8 YEARS AGO" textFill="#868686">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="194.0" layoutY="41.0" text="Nickname" textFill="#868686" underline="true">
+                  <Label fx:id="nick3" layoutX="103.0" layoutY="79.0" text="Nickname" textFill="#868686" underline="true">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="100.0" layoutY="8.0" text="Title" textFill="WHITE">
+                  <Label fx:id="title3" layoutX="100.0" layoutY="8.0" text="Title" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="18.0" fitWidth="12.0" layoutX="273.0" layoutY="72.0" pickOnBounds="true">
+                  <ImageView fx:id="down3" fitHeight="18.0" fitWidth="12.0" layoutX="276.0" layoutY="70.0" pickOnBounds="true">
                      <image>
                         <Image url="@PICS/smallarrowdown.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="18.0" fitWidth="12.0" layoutX="224.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="up3" fitHeight="18.0" fitWidth="12.0" layoutX="227.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@PICS/smallarrowup.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="242.0" layoutY="69.0" text="228" textFill="WHITE">
+                  <Label fx:id="score3" alignment="CENTER" contentDisplay="CENTER" layoutX="245.0" layoutY="67.0" prefHeight="25.0" prefWidth="26.0" text="228" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="100.0" layoutY="62.0" text="TAG" textFill="#868686">
+                  <Label fx:id="tag3" layoutX="100.0" layoutY="62.0" text="TAG" textFill="#868686">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutY="335.0" prefHeight="103.0" prefWidth="302.0" style="-fx-background-color: #212121;">
+            <AnchorPane fx:id="pane4" layoutY="335.0" prefHeight="103.0" prefWidth="302.0" style="-fx-background-color: #212121;">
                <children>
-                  <ImageView fitHeight="82.0" fitWidth="81.0" layoutX="8.0" layoutY="11.0">
+                  <ImageView fx:id="image4" fitHeight="82.0" fitWidth="81.0" layoutX="8.0" layoutY="11.0">
                      <image>
                         <Image url="@PICS/when-you-type-send-nudes-but-it-auto-corrects-to-10381134.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="101.0" layoutY="41.0" text="8 YEARS AGO" textFill="#868686">
+                  <Label fx:id="date4" layoutX="101.0" layoutY="41.0" text="8 YEARS AGO" textFill="#868686">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="194.0" layoutY="41.0" text="Nickname" textFill="#868686" underline="true">
+                  <Label fx:id="nick4" layoutX="103.0" layoutY="79.0" text="Nickname" textFill="#868686" underline="true">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="100.0" layoutY="8.0" text="Title" textFill="WHITE">
+                  <Label fx:id="title4" layoutX="100.0" layoutY="8.0" text="Title" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="18.0" fitWidth="12.0" layoutX="273.0" layoutY="72.0" pickOnBounds="true">
+                  <ImageView fx:id="down4" fitHeight="18.0" fitWidth="12.0" layoutX="273.0" layoutY="72.0" pickOnBounds="true">
                      <image>
                         <Image url="@PICS/smallarrowdown.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="18.0" fitWidth="12.0" layoutX="224.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="up4" fitHeight="18.0" fitWidth="12.0" layoutX="224.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@PICS/smallarrowup.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="242.0" layoutY="69.0" text="228" textFill="WHITE">
+                  <Label fx:id="score4" alignment="CENTER" contentDisplay="CENTER" layoutX="240.0" layoutY="70.0" prefHeight="25.0" prefWidth="26.0" text="228" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="100.0" layoutY="62.0" text="TAG" textFill="#868686">
+                  <Label fx:id="tag4" layoutX="100.0" layoutY="62.0" text="TAG" textFill="#868686">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutY="447.0" prefHeight="103.0" prefWidth="302.0" style="-fx-background-color: #212121;">
+            <AnchorPane fx:id="pane5" layoutY="447.0" prefHeight="103.0" prefWidth="302.0" style="-fx-background-color: #212121;">
                <children>
-                  <ImageView fitHeight="82.0" fitWidth="81.0" layoutX="8.0" layoutY="11.0">
+                  <ImageView fx:id="image5" fitHeight="82.0" fitWidth="81.0" layoutX="8.0" layoutY="11.0">
                      <image>
                         <Image url="@PICS/when-you-type-send-nudes-but-it-auto-corrects-to-10381134.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="101.0" layoutY="41.0" text="8 YEARS AGO" textFill="#868686">
+                  <Label fx:id="date5" layoutX="101.0" layoutY="41.0" text="8 YEARS AGO" textFill="#868686">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="194.0" layoutY="41.0" text="Nickname" textFill="#868686" underline="true">
+                  <Label fx:id="nick5" layoutX="103.0" layoutY="79.0" text="Nickname" textFill="#868686" underline="true">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="100.0" layoutY="8.0" text="Title" textFill="WHITE">
+                  <Label fx:id="title5" layoutX="100.0" layoutY="8.0" text="Title" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="18.0" fitWidth="12.0" layoutX="273.0" layoutY="72.0" pickOnBounds="true">
+                  <ImageView fx:id="down5" fitHeight="18.0" fitWidth="12.0" layoutX="273.0" layoutY="72.0" pickOnBounds="true">
                      <image>
                         <Image url="@PICS/smallarrowdown.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="18.0" fitWidth="12.0" layoutX="224.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="up5" fitHeight="18.0" fitWidth="12.0" layoutX="224.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@PICS/smallarrowup.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="242.0" layoutY="69.0" text="228" textFill="WHITE">
+                  <Label fx:id="score5" alignment="CENTER" contentDisplay="CENTER" layoutX="242.0" layoutY="69.0" prefHeight="25.0" prefWidth="26.0" text="228" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="100.0" layoutY="62.0" text="TAG" textFill="#868686">
+                  <Label fx:id="tag5" layoutX="100.0" layoutY="62.0" text="TAG" textFill="#868686">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutY="562.0" prefHeight="103.0" prefWidth="302.0" style="-fx-background-color: #212121;">
+            <AnchorPane fx:id="pane6" layoutY="562.0" prefHeight="103.0" prefWidth="302.0" style="-fx-background-color: #212121;">
                <children>
-                  <ImageView fitHeight="82.0" fitWidth="81.0" layoutX="8.0" layoutY="11.0">
+                  <ImageView fx:id="image6" fitHeight="82.0" fitWidth="81.0" layoutX="8.0" layoutY="11.0">
                      <image>
                         <Image url="@PICS/when-you-type-send-nudes-but-it-auto-corrects-to-10381134.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="101.0" layoutY="41.0" text="8 YEARS AGO" textFill="#868686">
+                  <Label fx:id="date6" layoutX="101.0" layoutY="41.0" text="8 YEARS AGO" textFill="#868686">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label layoutX="194.0" layoutY="41.0" text="Nickname" textFill="#868686" underline="true">
+                  <Label fx:id="nick6" layoutX="103.0" layoutY="79.0" text="Nickname" textFill="#868686" underline="true">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="100.0" layoutY="8.0" text="Title" textFill="WHITE">
+                  <Label fx:id="title6" layoutX="100.0" layoutY="8.0" text="Title" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="18.0" fitWidth="12.0" layoutX="273.0" layoutY="72.0" pickOnBounds="true">
+                  <ImageView fx:id="down6" fitHeight="18.0" fitWidth="12.0" layoutX="273.0" layoutY="72.0" pickOnBounds="true">
                      <image>
                         <Image url="@PICS/smallarrowdown.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="18.0" fitWidth="12.0" layoutX="224.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="up6" fitHeight="18.0" fitWidth="12.0" layoutX="224.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@PICS/smallarrowup.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="242.0" layoutY="69.0" text="228" textFill="WHITE">
+                  <Label fx:id="score6" alignment="CENTER" contentDisplay="CENTER" layoutX="242.0" layoutY="70.0" prefHeight="25.0" prefWidth="26.0" text="228" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="100.0" layoutY="62.0" text="TAG" textFill="#868686">
+                  <Label fx:id="tag6" layoutX="100.0" layoutY="62.0" text="TAG" textFill="#868686">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -303,7 +303,7 @@
          </children></AnchorPane>
       <AnchorPane layoutX="550.0" prefHeight="700.0" prefWidth="529.0" style="-fx-background-color: #1c1c1c;">
          <children>
-            <ImageView fitHeight="461.0" fitWidth="491.0" layoutX="8.0" layoutY="14.0">
+            <ImageView fx:id="ActiveImage" fitHeight="461.0" fitWidth="491.0" layoutX="8.0" layoutY="14.0">
                <image>
                   <Image url="@PICS/when-you-type-send-nudes-but-it-auto-corrects-to-10381134.png" />
                </image>

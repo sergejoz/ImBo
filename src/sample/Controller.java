@@ -224,6 +224,7 @@ public class Controller {
     FXMLLoader loader;
 
     public Controller() {
+
     }
 
     @FXML
@@ -257,16 +258,70 @@ public class Controller {
 
         NewPostsButton.setOnMouseClicked(event ->
         {
-            Posts zpzz = new Posts();
             DatabaseHandler db = new DatabaseHandler();
+
             try {
                 db.getPosts();
-                //System.out.println("" + Posts.posts.get(0).tag);
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             System.out.println("KTO ETO");
-        })
+            //post1
+            Post post1 = Posts.getPosts().posts.get(0);
+            title1.setText(post1.postname);
+            nick1.setText(post1.nickname);
+            date1.setText(post1.postdate);
+            tag1.setText(post1.tag);
+            image1.setImage(post1.picture);
+            score1.setText(post1.rate);
+
+            //post2
+            Post post2 = Posts.getPosts().posts.get(1);
+            title2.setText(post2.postname);
+            nick2.setText(post2.nickname);
+            date2.setText(post2.postdate);
+            tag2.setText(post2.tag);
+            image2.setImage(post2.picture);
+            score2.setText(post2.rate);
+
+            //post3
+            Post post3 = Posts.getPosts().posts.get(2);
+            title3.setText(post3.postname);
+            nick3.setText(post3.nickname);
+            date3.setText(post3.postdate);
+            tag3.setText(post3.tag);
+            image3.setImage(post3.picture);
+            score3.setText(post3.rate);
+
+            //post4
+            Post post4 = Posts.getPosts().posts.get(3);
+            title4.setText(post4.postname);
+            nick4.setText(post4.nickname);
+            date4.setText(post4.postdate);
+            tag4.setText(post4.tag);
+            image4.setImage(post4.picture);
+            score4.setText(post4.rate);
+
+            //post5
+            Post post5 = Posts.getPosts().posts.get(4);
+            title5.setText(post5.postname);
+            nick5.setText(post5.nickname);
+            date5.setText(post5.postdate);
+            tag5.setText(post5.tag);
+            image5.setImage(post5.picture);
+            score5.setText(post5.rate);
+
+            //post6
+            Post post6 = Posts.getPosts().posts.get(5);
+            title6.setText(post6.postname);
+            nick6.setText(post6.nickname);
+            date6.setText(post6.postdate);
+            tag6.setText(post6.tag);
+            image6.setImage(post6.picture);
+            score6.setText(post6.rate);
+        }
+
+        )
         ;
 
     }

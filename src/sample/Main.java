@@ -17,6 +17,8 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 1085, 700));
         this.primaryStage = primaryStage;
         primaryStage.show();
+        Posts pzz = new Posts();
+        pzz.setPosts(pzz);
     }
 
 

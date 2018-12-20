@@ -23,7 +23,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label fx:id="nick1" layoutX="194.0" layoutY="41.0" text="Nickname" textFill="#868686" underline="true">
+                  <Label fx:id="nick1" layoutX="103.0" layoutY="79.0" text="Nickname" textFill="#868686" underline="true">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -33,17 +33,17 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <ImageView fx:id="down1" fitHeight="18.0" fitWidth="12.0" layoutX="273.0" layoutY="72.0" pickOnBounds="true">
+                  <ImageView fx:id="down1" fitHeight="18.0" fitWidth="12.0" layoutX="276.0" layoutY="73.0" pickOnBounds="true">
                      <image>
                         <Image url="@PICS/smallarrowdown.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="up1" fitHeight="18.0" fitWidth="12.0" layoutX="224.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="up1" fitHeight="18.0" fitWidth="12.0" layoutX="227.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@PICS/smallarrowup.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="score1" layoutX="242.0" layoutY="69.0" text="228" textFill="WHITE">
+                  <Label fx:id="score1" alignment="CENTER" contentDisplay="CENTER" layoutX="239.0" layoutY="70.0" prefHeight="25.0" prefWidth="32.0" text="228" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -92,7 +92,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label fx:id="nick2" layoutX="194.0" layoutY="41.0" text="Nickname" textFill="#868686" underline="true">
+                  <Label fx:id="nick2" layoutX="103.0" layoutY="79.0" text="Nickname" textFill="#868686" underline="true">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -102,17 +102,17 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <ImageView fx:id="down2" fitHeight="18.0" fitWidth="12.0" layoutX="273.0" layoutY="72.0" pickOnBounds="true">
+                  <ImageView fx:id="down2" fitHeight="18.0" fitWidth="12.0" layoutX="276.0" layoutY="63.0" pickOnBounds="true">
                      <image>
                         <Image url="@PICS/smallarrowdown.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="up2" fitHeight="18.0" fitWidth="12.0" layoutX="224.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="up2" fitHeight="18.0" fitWidth="12.0" layoutX="227.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@PICS/smallarrowup.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="score2" layoutX="242.0" layoutY="69.0" text="228" textFill="WHITE">
+                  <Label fx:id="score2" alignment="CENTER" contentDisplay="CENTER" layoutX="245.0" layoutY="60.0" prefHeight="25.0" prefWidth="26.0" text="228" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -136,7 +136,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label fx:id="nick3" layoutX="194.0" layoutY="41.0" text="Nickname" textFill="#868686" underline="true">
+                  <Label fx:id="nick3" layoutX="103.0" layoutY="79.0" text="Nickname" textFill="#868686" underline="true">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -146,17 +146,17 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <ImageView fx:id="down3" fitHeight="18.0" fitWidth="12.0" layoutX="273.0" layoutY="72.0" pickOnBounds="true">
+                  <ImageView fx:id="down3" fitHeight="18.0" fitWidth="12.0" layoutX="276.0" layoutY="70.0" pickOnBounds="true">
                      <image>
                         <Image url="@PICS/smallarrowdown.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="up3" fitHeight="18.0" fitWidth="12.0" layoutX="224.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="up3" fitHeight="18.0" fitWidth="12.0" layoutX="227.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@PICS/smallarrowup.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="score3" layoutX="242.0" layoutY="69.0" text="228" textFill="WHITE">
+                  <Label fx:id="score3" alignment="CENTER" contentDisplay="CENTER" layoutX="245.0" layoutY="67.0" prefHeight="25.0" prefWidth="26.0" text="228" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -180,7 +180,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label fx:id="nick4" layoutX="194.0" layoutY="41.0" text="Nickname" textFill="#868686" underline="true">
+                  <Label fx:id="nick4" layoutX="103.0" layoutY="79.0" text="Nickname" textFill="#868686" underline="true">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -200,7 +200,7 @@
                         <Image url="@PICS/smallarrowup.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="score4" layoutX="242.0" layoutY="69.0" text="228" textFill="WHITE">
+                  <Label fx:id="score4" alignment="CENTER" contentDisplay="CENTER" layoutX="240.0" layoutY="70.0" prefHeight="25.0" prefWidth="26.0" text="228" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -224,7 +224,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label fx:id="nick5" layoutX="194.0" layoutY="41.0" text="Nickname" textFill="#868686" underline="true">
+                  <Label fx:id="nick5" layoutX="103.0" layoutY="79.0" text="Nickname" textFill="#868686" underline="true">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -244,7 +244,7 @@
                         <Image url="@PICS/smallarrowup.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="score5" layoutX="242.0" layoutY="69.0" text="228" textFill="WHITE">
+                  <Label fx:id="score5" alignment="CENTER" contentDisplay="CENTER" layoutX="242.0" layoutY="69.0" prefHeight="25.0" prefWidth="26.0" text="228" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -268,7 +268,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <Label fx:id="nick6" layoutX="194.0" layoutY="41.0" text="Nickname" textFill="#868686" underline="true">
+                  <Label fx:id="nick6" layoutX="103.0" layoutY="79.0" text="Nickname" textFill="#868686" underline="true">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -288,7 +288,7 @@
                         <Image url="@PICS/smallarrowup.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="score6" layoutX="242.0" layoutY="69.0" text="228" textFill="WHITE">
+                  <Label fx:id="score6" alignment="CENTER" contentDisplay="CENTER" layoutX="242.0" layoutY="70.0" prefHeight="25.0" prefWidth="26.0" text="228" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>

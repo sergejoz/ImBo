@@ -103,81 +103,38 @@ public class DatabaseHandler extends Configs {
         return resault;
     }
 
-    public void getPosts() throws SQLException {
+    public void getPosts() throws SQLException, IOException {
+        Integer limit = 6;
+        Integer limitc = 0;
         String maxid = getMaxId();
-        String restul= null;
+        String restul = null;
         String needit = maxid;
-        //Posts ppp = new Posts();
         Statement pst = getDbConnection().createStatement();
         try {
             String sql = "SELECT title, image, category, date_publish,score, name" +
                     " FROM posts,users" +
-                    " WHERE posts.post_id = "  + needit + " AND " +  "users.user_id = posts.user_id";
+                    " WHERE " + "users.user_id = posts.user_id "
+                    + "ORDER BY date_publish DESC LIMIT " + 1 * limit;
             ResultSet resSet = pst.executeQuery(sql);
-                if (resSet.next()) {
-                //String postid = resSet.getString("");
-                /*String title = resSet.getString("title");
-                Blob blobima = resSet.getBlob("image");
-                String date = resSet.getString("date_publish");
-                String nickname = resSet.getString("name");
-                String tag = resSet.getString("category");
-                String rate = resSet.getString("score");*/
-
-                   Posts.postname =  resSet.getString("title");
-                   Posts.picture = resSet.getBlob("image");
-                   Posts.postdate = resSet.getString("date_publish");
-                   Posts.nickname = resSet.getString("name");
-                   Posts.tag = resSet.getString("category");
-                   Posts.rate = resSet.getString("score");
-
-                //ppp.AddPost(title,nickname,date,blobima,tag,rate);
-
+            while (resSet.next()) {
+                if (limit < limitc) {
+                    limitc++;
+                    continue;
                 }
+                    String title = resSet.getString("title");
+                    BufferedImage Bimage = ImageIO.read(resSet.getBlob("image").getBinaryStream());
+                    Image image = SwingFXUtils.toFXImage(Bimage, null);
+                    String date = resSet.getString("date_publish");
+                    date = date.substring(0, date.length() - 3);
+                    String nickname = resSet.getString("name");
+                    String tag = resSet.getString("category");
+                    String rate = resSet.getString("score");
+                    Posts.getPosts().posts.add(new Post(title, nickname, date, image, tag, rate));
+            }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
-        /*try (Connection connection = getDbConnection())
-        {
-            Statement mystm = connection.createStatement();
-            String sql = "Select image from posts order by post_id desc limit 1"; //импорт картинки
-            ResultSet resultSet = mystm.executeQuery(sql);
-            while (resultSet.next()) {
-                Blob blob = resultSet.getBlob("image");
-                BufferedImage Bimage = ImageIO.read(blob.getBinaryStream());
-                Image image = SwingFXUtils.toFXImage(Bimage, null);
-                imagep.setImage(image);
-            }
-            String sql1 = "Select title from posts order by post_id desc limit 1";
-            ResultSet resultSet1 = mystm.executeQuery(sql1);
-            if (resultSet1.next()) {
-                titlep.setText( resultSet1.getString(1));
-            }
-
-            String sql2 = "Select users.name from posts join users where posts.user_id = users.user_id order by post_id desc limit 1";
-            ResultSet resultSet2 = mystm.executeQuery(sql2);
-            if (resultSet2.next()) {
-                nickp.setText( resultSet2.getString(1));
-            }
-
-            String sql3 = "Select date(date_publish) from posts  order by post_id desc limit 1";
-            ResultSet resultSet3 = mystm.executeQuery(sql3);
-            if (resultSet3.next()) {
-                datep.setText( resultSet3.getString(1));
-            }
-
-            String sql4 = "Select category from posts  order by post_id desc limit 1";
-            ResultSet resultSet4 = mystm.executeQuery(sql4);
-            if (resultSet4.next()) {
-                tagp.setText( resultSet4.getString(1));
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
-
     }
 }
 
