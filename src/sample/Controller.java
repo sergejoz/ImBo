@@ -294,7 +294,7 @@ public class Controller {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            UpdateForm();
+            UpdateFormByPage();
             first = false;
             ActivePosts(0);
         }
@@ -371,31 +371,36 @@ public class Controller {
         DotaCat.setOnMouseClicked(event ->
         {
             TIP = "DOTA";
-            UpdateFormByPage();
+            PageId = 1;
+            UpdateFormByPage();UpdatePageCounts();
         });
 
         AwwCat.setOnMouseClicked(event ->
         {
             TIP = "aww";
-            UpdateFormByPage();
+            PageId = 1;
+            UpdateFormByPage();UpdatePageCounts();
         });
 
         animecat.setOnMouseClicked(event ->
         {
             TIP = "anime";
-            UpdateFormByPage();
+            PageId = 1;
+            UpdateFormByPage();UpdatePageCounts();
         });
 
         CosplayCat.setOnMouseClicked(event ->
         {
             TIP = "cosplay";
-            UpdateFormByPage();
+            PageId = 1;
+            UpdateFormByPage();UpdatePageCounts();
         });
 
         CatsCat.setOnMouseClicked(event ->
         {
             TIP = "cats";
-            UpdateFormByPage();
+            PageId = 1;
+            UpdateFormByPage();UpdatePageCounts();
         });
         //endregion
 
