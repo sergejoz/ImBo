@@ -221,7 +221,12 @@ public class Controller {
     @FXML
     private Label CurrentUser;
 
+
+
     FXMLLoader loader;
+
+
+
 
     public Controller() {
 
@@ -323,6 +328,66 @@ public class Controller {
 
         )
         ;
+
+        pane1.setOnMouseClicked(event ->
+        {
+            ActiveImage.setImage(image1.getImage());
+            ActiveNickname.setText(nick1.getText());
+            ActiveDate.setText(date1.getText());
+            ActiveTitle.setText(title1.getText());
+            ActiveTag.setText(tag1.getText());
+            ActiveRate.setText(score1.getText());
+        });
+
+        pane2.setOnMouseClicked(event ->
+        {
+            ActiveImage.setImage(image2.getImage());
+            ActiveNickname.setText(nick2.getText());
+            ActiveDate.setText(date2.getText());
+            ActiveTitle.setText(title2.getText());
+            ActiveTag.setText(tag2.getText());
+            ActiveRate.setText(score2.getText());
+        });
+
+        pane3.setOnMouseClicked(event ->
+        {
+            ActiveImage.setImage(image3.getImage());
+            ActiveNickname.setText(nick3.getText());
+            ActiveDate.setText(date3.getText());
+            ActiveTitle.setText(title3.getText());
+            ActiveTag.setText(tag3.getText());
+            ActiveRate.setText(score3.getText());
+        });
+
+        pane4.setOnMouseClicked(event ->
+        {
+            ActiveImage.setImage(image4.getImage());
+            ActiveNickname.setText(nick4.getText());
+            ActiveDate.setText(date4.getText());
+            ActiveTitle.setText(title4.getText());
+            ActiveTag.setText(tag4.getText());
+            ActiveRate.setText(score4.getText());
+        });
+
+        pane5.setOnMouseClicked(event ->
+        {
+            ActiveImage.setImage(image5.getImage());
+            ActiveNickname.setText(nick5.getText());
+            ActiveDate.setText(date5.getText());
+            ActiveTitle.setText(title5.getText());
+            ActiveTag.setText(tag5.getText());
+            ActiveRate.setText(score5.getText());
+        });
+
+        pane6.setOnMouseClicked(event ->
+        {
+            ActiveImage.setImage(image6.getImage());
+            ActiveNickname.setText(nick6.getText());
+            ActiveDate.setText(date6.getText());
+            ActiveTitle.setText(title6.getText());
+            ActiveTag.setText(tag6.getText());
+            ActiveRate.setText(score6.getText());
+        });
 
     }
 

@@ -301,7 +301,7 @@
                </children>
             </AnchorPane>
          </children></AnchorPane>
-      <AnchorPane layoutX="550.0" prefHeight="700.0" prefWidth="529.0" style="-fx-background-color: #1c1c1c;">
+      <AnchorPane fx:id="pane_main" layoutX="550.0" prefHeight="700.0" prefWidth="529.0" style="-fx-background-color: #1c1c1c;">
          <children>
             <ImageView fx:id="ActiveImage" fitHeight="461.0" fitWidth="491.0" layoutX="8.0" layoutY="14.0">
                <image>
