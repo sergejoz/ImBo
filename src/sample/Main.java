@@ -14,7 +14,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         primaryStage.setTitle("MegaImageBoard");
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setScene(new Scene(root, 1085, 700));
+        primaryStage.setScene(new Scene(root, 1156, 700));
         this.primaryStage = primaryStage;
         primaryStage.show();
         Posts pzz = new Posts();

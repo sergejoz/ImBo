@@ -29,6 +29,8 @@ public class CreatePostController {
     private Button cancel;
     @FXML
     private Label status;
+    @FXML
+    private TextField textBox1;
 
     private FileChooser fileChooser = new FileChooser();
     private File file;
@@ -55,7 +57,7 @@ public class CreatePostController {
     private void browsePic() {
         file = fileChooser.showOpenDialog(Main.primaryStage);
         if (file != null) {
-            image = new Image(file.toURI().toString(), 200.0D, 150.0D, true, true);
+            image = new Image(file.toURI().toString());
             imageView.setImage(image);
             imageIsSet = true;
         }
@@ -71,12 +73,16 @@ public class CreatePostController {
             status.setText("Название поста должно быть больше пяти символов");
             return;
         }
+        if (textBox1.getText().length() <= 2) {
+            status.setText("Название категории должно быть больше 2 символов");
+            return;
+        }
         if (!imageIsSet) {
             status.setText("Вы не выбрали изображение");
             return;
         }
         DatabaseHandler db = new DatabaseHandler();
-        if (db.createPost(User.getCurrentUser().getNickname(), headerPost.getText(), file)) {
+        if (db.createPost(User.getCurrentUser().getNickname(), headerPost.getText(), file, textBox1.getText())) {
             status.setText("Пост опубликован");
             publicate.setVisible(false);
             loadImage.setVisible(false);

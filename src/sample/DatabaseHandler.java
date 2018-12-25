@@ -54,6 +54,11 @@ public class DatabaseHandler extends Configs {
         connectDB1(update);
     }
 
+    public void UpdateVote(String PostID, String value) {
+        String update = "UPDATE test.posts SET score = " + value + " WHERE post_id = " + PostID;
+        connectDB1(update);
+    }
+
 
     private void connectDB1(String command) {
         try {
@@ -76,13 +81,14 @@ public class DatabaseHandler extends Configs {
     }
 
 
-    public boolean createPost(String userName, String postHeader, File file) {
+    public boolean createPost(String userName, String postHeader, File file, String categ) {
         try {
-            String query = "INSERT INTO test.posts (user_id,title,image) VALUES((select user_id from users where users.name = '" + userName + "' LIMIT 1),?,?)";
+            String query = "INSERT INTO test.posts (user_id,title,image,category) VALUES((select user_id from users where users.name = '" + userName + "' LIMIT 1),?,?,?)";
             PreparedStatement pst = getDbConnection().prepareStatement(query);
             pst.setString(1, postHeader);
             FileInputStream fis = new FileInputStream(file);
             pst.setBinaryStream(2, fis, (int) file.length());
+            pst.setString(3,categ);
             pst.execute();
             pst.close();
         } catch (Exception var5) {
@@ -103,35 +109,70 @@ public class DatabaseHandler extends Configs {
         return resault;
     }
 
-    public void getPosts() throws SQLException, IOException {
-        Integer limit = 6;
-        Integer limitc = 0;
-        String maxid = getMaxId();
-        String restul = null;
-        String needit = maxid;
+    public void getPosts(int page) throws SQLException, IOException {
+        Posts.getPosts().posts.clear();
         Statement pst = getDbConnection().createStatement();
         try {
-            String sql = "SELECT title, image, category, date_publish,score, name" +
-                    " FROM posts,users" +
-                    " WHERE " + "users.user_id = posts.user_id "
-                    + "ORDER BY date_publish DESC LIMIT " + 1 * limit;
+            String sql = "Call getNewPosts(" + page + ")";
             ResultSet resSet = pst.executeQuery(sql);
             while (resSet.next()) {
-                if (limit < limitc) {
-                    limitc++;
-                    continue;
-                }
-                    String title = resSet.getString("title");
-                    BufferedImage Bimage = ImageIO.read(resSet.getBlob("image").getBinaryStream());
-                    Image image = SwingFXUtils.toFXImage(Bimage, null);
-                    String date = resSet.getString("date_publish");
-                    date = date.substring(0, date.length() - 3);
-                    String nickname = resSet.getString("name");
-                    String tag = resSet.getString("category");
-                    String rate = resSet.getString("score");
-                    Posts.getPosts().posts.add(new Post(title, nickname, date, image, tag, rate));
+                String title = resSet.getString("title");
+                BufferedImage Bimage = ImageIO.read(resSet.getBlob("image").getBinaryStream());
+                Image image = SwingFXUtils.toFXImage(Bimage, null);
+                String date = resSet.getString("date_publish");
+                date = date.substring(0, date.length() - 3);
+                String nickname = resSet.getString("name");
+                String tag = resSet.getString("category");
+                String rate = resSet.getString("score");
+                String postid = resSet.getString("post_id");
+                Posts.getPosts().posts.add(new Post(title, nickname, date, image, tag, rate, postid));
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
+    public void getPopular(int page) throws SQLException, IOException {
+        Posts.getPosts().posts.clear();
+        Statement pst = getDbConnection().createStatement();
+        try {
+            String sql = "Call getPopularPosts(" + page + ")";
+            ResultSet resSet = pst.executeQuery(sql);
+            while (resSet.next()) {
+                String title = resSet.getString("title");
+                BufferedImage Bimage = ImageIO.read(resSet.getBlob("image").getBinaryStream());
+                Image image = SwingFXUtils.toFXImage(Bimage, null);
+                String date = resSet.getString("date_publish");
+                date = date.substring(0, date.length() - 3);
+                String nickname = resSet.getString("name");
+                String tag = resSet.getString("category");
+                String rate = resSet.getString("score");
+                String postid = resSet.getString("post_id");
+                Posts.getPosts().posts.add(new Post(title, nickname, date, image, tag, rate, postid));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void getPostsbyCategory(int page,String CategoryName) throws SQLException, IOException {
+        Posts.getPosts().posts.clear();
+        Statement pst = getDbConnection().createStatement();
+        try {
+            String sql = "Call getPostsbyCategory(" + page + ", '" + CategoryName + "')";
+            ResultSet resSet = pst.executeQuery(sql);
+            while (resSet.next()) {
+                String title = resSet.getString("title");
+                BufferedImage Bimage = ImageIO.read(resSet.getBlob("image").getBinaryStream());
+                Image image = SwingFXUtils.toFXImage(Bimage, null);
+                String date = resSet.getString("date_publish");
+                date = date.substring(0, date.length() - 3);
+                String nickname = resSet.getString("name");
+                String tag = resSet.getString("category");
+                String rate = resSet.getString("score");
+                String postid = resSet.getString("post_id");
+                Posts.getPosts().posts.add(new Post(title, nickname, date, image, tag, rate, postid));
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
