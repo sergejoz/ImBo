@@ -87,6 +87,7 @@ public class CreatePostController {
             publicate.setVisible(false);
             loadImage.setVisible(false);
             textBox.setVisible(false);
+            textBox1.setVisible(false);
             cancel.setText("Выход");
         }
         else

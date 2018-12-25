@@ -28,7 +28,7 @@
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label fx:id="title1" layoutX="100.0" layoutY="8.0" prefHeight="30.0" prefWidth="179.0" text="Title" textFill="WHITE">
+                  <Label fx:id="title1" layoutX="100.0" layoutY="8.0" prefHeight="30.0" prefWidth="258.0" text="Title" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -97,7 +97,7 @@
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label fx:id="title2" layoutX="100.0" layoutY="8.0" text="Title" textFill="WHITE">
+                  <Label fx:id="title2" layoutX="100.0" layoutY="8.0" prefHeight="30.0" prefWidth="258.0" text="Title" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -141,7 +141,7 @@
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label fx:id="title3" layoutX="100.0" layoutY="8.0" text="Title" textFill="WHITE">
+                  <Label fx:id="title3" layoutX="100.0" layoutY="8.0" prefWidth="258.0" text="Title" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -185,7 +185,7 @@
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label fx:id="title4" layoutX="100.0" layoutY="8.0" text="Title" textFill="WHITE">
+                  <Label fx:id="title4" layoutX="100.0" layoutY="8.0" prefWidth="258.0" text="Title" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -229,7 +229,7 @@
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label fx:id="title5" layoutX="100.0" layoutY="8.0" text="Title" textFill="WHITE">
+                  <Label fx:id="title5" layoutX="100.0" layoutY="8.0" prefWidth="258.0" text="Title" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -273,7 +273,7 @@
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label fx:id="title6" layoutX="100.0" layoutY="8.0" text="Title" textFill="WHITE">
+                  <Label fx:id="title6" layoutX="100.0" layoutY="8.0" prefWidth="258.0" text="Title" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
